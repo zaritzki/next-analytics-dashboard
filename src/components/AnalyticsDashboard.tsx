@@ -78,9 +78,12 @@ const AnalyticsDashboard = ({
 					This week top visitors:
 				</h2>
 				<div className='col-span-3 flex items-center justify-between flex-wrap'>
-					{topCountries?.map(([countryCode, number]) => {
+					{topCountries?.map(([countryCode, number], index) => {
 						return (
-							<div className='flex items-center gap-3 text-dark-tremor-content-strong'>
+							<div
+								key={index}
+								className='flex items-center gap-3 text-dark-tremor-content-strong'
+							>
 								<p className='hidden sm:block text-tremor-content'>
 									{countryCode}
 								</p>
